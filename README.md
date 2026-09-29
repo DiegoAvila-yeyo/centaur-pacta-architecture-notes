@@ -1,59 +1,27 @@
 # Centaur Pacta Architecture Notes
 
-This repository stores architecture notes for embedding Centaur into `pacta-web` as a Pacta workspace agent.
+Repositorio de notas de arquitectura para explorar como incrustar Centaur dentro de un workspace de Pacta. Es un repo de diseno y decisiones, no una app ejecutable.
 
-## Intent
+## Objetivo
 
-This is not a traditional web IDE.
+Definir una arquitectura tipo dashboard/control plane donde una IA pueda trabajar sobre repos reales con aprobaciones humanas en pasos sensibles.
 
-The target is a dashboard / control plane where Centaur can work on real repositories with human approvals at sensitive steps.
+## Contenido
 
-## Desired Flow
+- `README.md`: framing actual
+- `docs/session-2026-07-01.md`: sesion base con la interpretacion vigente
 
-1. Enter a repo or section.
-2. Request tickets.
-3. Choose a ticket.
-4. Plan with Centaur.
-5. Let Centaur implement changes in the correct repo.
-6. Review diff and validations.
-7. Approve commit.
-8. Approve push.
-9. Approve PR.
+## Instalacion
 
-## Design Constraints
+No requiere instalacion porque hoy es documental.
 
-- Iterative co-design, not a closed solution.
-- Short, clear architectural discussion.
-- No default push toward microservices.
-- Focus on boundaries, responsibilities, and tradeoffs.
-- Ask when ambiguity matters.
-- Critique risks clearly.
-- Avoid turning this into an implementation plan too early.
+```bash
+git clone https://github.com/DiegoAvila-yeyo/centaur-pacta-architecture-notes.git
+cd centaur-pacta-architecture-notes
+```
 
-## Current Framing
+## Uso
 
-The working metaphor is:
-
-- `center`
-- `shell`
-- `rails`
-
-The current interpretation from the session is captured in [docs/session-2026-07-01.md](/Users/eltitoyeyo/centaur-pacta-architecture-notes/docs/session-2026-07-01.md).
-
-## Current Focus
-
-For now, the exploration is centered on vanilla application architecture:
-
-- architecture families
-- code organization
-- internal boundaries
-- workflows
-- movement/control inside the system
-
-Explicitly de-emphasized for now:
-
-- persistence
-- memory subsystem
-- distributed infrastructure
-- cloud topology
-
+1. Lee este `README`.
+2. Sigue con [docs/session-2026-07-01.md](/Users/eltitoyeyo/centaur-pacta-architecture-notes/docs/session-2026-07-01.md).
+3. Usa el repo como decision log para la arquitectura de Centaur en Pacta.
